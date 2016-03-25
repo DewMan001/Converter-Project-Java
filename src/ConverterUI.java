@@ -34,6 +34,11 @@ public class ConverterUI extends javax.swing.JFrame {
 
         btn_InchesToCm.setText("Inches to Centimetres");
         btn_InchesToCm.setToolTipText("Put your measurement in the inches text box and click here to convert it to centimetres!");
+        btn_InchesToCm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_InchesToCmActionPerformed(evt);
+            }
+        });
 
         txt_Inches.setToolTipText("Put your inches in here!");
 
@@ -113,6 +118,20 @@ public class ConverterUI extends javax.swing.JFrame {
     private void txt_CmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_CmActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_CmActionPerformed
+
+    private void btn_InchesToCmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_InchesToCmActionPerformed
+        //declaring the variablble for inches
+        //and collecting its data from the text box
+        double inches;
+        inches = Double.parseDouble(txt_Inches.getText());
+        
+        //declaring centimetres and running the conversion formula
+        double cm;
+        cm = Math.round( (inches * 2.54) * 100.0 ) / 100.0;
+        
+        //putting the result into the centimetres textbox
+        txt_Cm.setText(String.valueOf(cm));
+    }//GEN-LAST:event_btn_InchesToCmActionPerformed
 
     /**
      * @param args the command line arguments
