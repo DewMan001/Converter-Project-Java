@@ -9,10 +9,7 @@
  * @author dewey
  */
 public class ConverterUI extends javax.swing.JFrame {
-
-    /**
-     * Creates new form ConverterUI
-     */
+    
     public ConverterUI() {
         initComponents();
     }
@@ -29,7 +26,7 @@ public class ConverterUI extends javax.swing.JFrame {
         btn_InchesToCm = new javax.swing.JButton();
         txt_Inches = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_CmToInches = new javax.swing.JButton();
         txt_Cm = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
@@ -42,9 +39,19 @@ public class ConverterUI extends javax.swing.JFrame {
 
         jLabel1.setText("Inches");
 
-        jButton1.setText("Centimetres to Inches");
+        btn_CmToInches.setText("Centimetres to Inches");
+        btn_CmToInches.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_CmToInchesActionPerformed(evt);
+            }
+        });
 
         txt_Cm.setToolTipText("Put your inches in here!");
+        txt_Cm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_CmActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Centimetres");
 
@@ -54,7 +61,7 @@ public class ConverterUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(btn_CmToInches)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -81,13 +88,31 @@ public class ConverterUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_InchesToCm)
                     .addComponent(txt_Inches, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1)
+                    .addComponent(btn_CmToInches)
                     .addComponent(txt_Cm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(176, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_CmToInchesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CmToInchesActionPerformed
+        //declaring the variable for centimetres
+        //and collecting its data from the text box
+        double cm;
+        cm = Double.parseDouble(txt_Cm.getText());
+        
+        //declaring inches and running the conversion formula
+        double inches;
+        inches = Math.round( (cm / 2.54) * 100.0 ) / 100.0;
+        
+        //putting the result into the inches textbox
+        txt_Inches.setText(String.valueOf(inches));
+    }//GEN-LAST:event_btn_CmToInchesActionPerformed
+
+    private void txt_CmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_CmActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_CmActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,8 +150,8 @@ public class ConverterUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_CmToInches;
     private javax.swing.JButton btn_InchesToCm;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField txt_Cm;
