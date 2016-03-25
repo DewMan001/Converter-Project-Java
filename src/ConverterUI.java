@@ -29,11 +29,22 @@ public class ConverterUI extends javax.swing.JFrame {
         btn_CmToInches = new javax.swing.JButton();
         txt_Cm = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        btn_MetersToFeet = new javax.swing.JButton();
+        btn_FeetToMeters = new javax.swing.JButton();
+        txt_Feet = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txt_Meters = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btn_InchesToCm.setText("Inches to Centimetres");
         btn_InchesToCm.setToolTipText("Put your measurement in the inches text box and click here to convert it to centimetres!");
+        btn_InchesToCm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_InchesToCmActionPerformed(evt);
+            }
+        });
 
         txt_Inches.setToolTipText("Put your inches in here!");
 
@@ -55,27 +66,60 @@ public class ConverterUI extends javax.swing.JFrame {
 
         jLabel2.setText("Centimetres");
 
+        btn_MetersToFeet.setLabel("Meters to Feet");
+
+        btn_FeetToMeters.setText("Feet to Meters");
+        btn_FeetToMeters.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_FeetToMetersActionPerformed(evt);
+            }
+        });
+
+        txt_Feet.setToolTipText("Put your inches in here!");
+
+        jLabel3.setText("Feet");
+
+        txt_Meters.setToolTipText("Put your inches in here!");
+        txt_Meters.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_MetersActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Meters");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_CmToInches)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_CmToInches, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_MetersToFeet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txt_Cm, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
-                        .addComponent(txt_Inches, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_InchesToCm)
-                        .addContainerGap())
+                        .addComponent(txt_Inches, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(219, 219, 219))))
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txt_Meters, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                        .addComponent(txt_Feet, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_FeetToMeters, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_InchesToCm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,7 +134,20 @@ public class ConverterUI extends javax.swing.JFrame {
                     .addComponent(txt_Inches, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_CmToInches)
                     .addComponent(txt_Cm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn_MetersToFeet)
+                        .addComponent(btn_FeetToMeters))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_Feet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_Meters, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         pack();
@@ -113,6 +170,28 @@ public class ConverterUI extends javax.swing.JFrame {
     private void txt_CmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_CmActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_CmActionPerformed
+
+    private void btn_InchesToCmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_InchesToCmActionPerformed
+        //declaring the variablble for inches
+        //and collecting its data from the text box
+        double inches;
+        inches = Double.parseDouble(txt_Inches.getText());
+        
+        //declaring centimetres and running the conversion formula
+        double cm;
+        cm = Math.round( (inches * 2.54) * 100.0 ) / 100.0;
+        
+        //putting the result into the centimetres textbox
+        txt_Cm.setText(String.valueOf(cm));
+    }//GEN-LAST:event_btn_InchesToCmActionPerformed
+
+    private void btn_FeetToMetersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_FeetToMetersActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_FeetToMetersActionPerformed
+
+    private void txt_MetersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_MetersActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_MetersActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,10 +230,16 @@ public class ConverterUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_CmToInches;
+    private javax.swing.JButton btn_FeetToMeters;
     private javax.swing.JButton btn_InchesToCm;
+    private javax.swing.JButton btn_MetersToFeet;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField txt_Cm;
+    private javax.swing.JTextField txt_Feet;
     private javax.swing.JTextField txt_Inches;
+    private javax.swing.JTextField txt_Meters;
     // End of variables declaration//GEN-END:variables
 }
