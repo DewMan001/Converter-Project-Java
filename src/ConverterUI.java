@@ -114,7 +114,7 @@ public class ConverterUI extends javax.swing.JFrame {
                                 .addGap(23, 23, 23))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(txt_Cm, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 205, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
                                 .addComponent(txt_Inches, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(txt_Meters, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -174,11 +174,29 @@ public class ConverterUI extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_CmActionPerformed
 
     private void btn_FeetToMetersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_FeetToMetersActionPerformed
-        // TODO add your handling code here:
+        //declaring feet and getting the data from the text box
+        double feet;
+        feet = Double.parseDouble(txt_Feet.getText());
+        
+        //declaring meters and running the conversion formula
+        double meters;
+        meters = Math.round( (feet * 0.3048) * 100.0) / 100.0;
+        
+        //putting the result into the meters textbox
+        txt_Meters.setText(String.valueOf(meters));
     }//GEN-LAST:event_btn_FeetToMetersActionPerformed
 
     private void btn_MetersToFeetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_MetersToFeetActionPerformed
-        // TODO add your handling code here:
+        //declaring meters and getting the data from the text box
+        double meters;
+        meters = Double.parseDouble(txt_Meters.getText());
+        
+        //declaring meters and running the conversion formula
+        double feet;
+        feet = Math.round( (meters / 0.3048) * 100.0) / 100.0;
+        
+        //putting the result into the feet textbox
+        txt_Feet.setText(String.valueOf(feet));
     }//GEN-LAST:event_btn_MetersToFeetActionPerformed
 
     private void txt_MetersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_MetersActionPerformed
