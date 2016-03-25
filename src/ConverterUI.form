@@ -25,7 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <Component id="btn_CmToInches" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
@@ -58,7 +58,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btn_InchesToCm" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txt_Inches" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btn_CmToInches" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txt_Cm" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="176" max="32767" attributes="0"/>
@@ -83,15 +83,21 @@
         <Property name="text" type="java.lang.String" value="Inches"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="btn_CmToInches">
       <Properties>
         <Property name="text" type="java.lang.String" value="Centimetres to Inches"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_CmToInchesActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_Cm">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" value="Put your inches in here!"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_CmActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
