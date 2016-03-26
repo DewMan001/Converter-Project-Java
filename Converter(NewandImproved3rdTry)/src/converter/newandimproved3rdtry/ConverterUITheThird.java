@@ -289,6 +289,23 @@ public class ConverterUITheThird extends javax.swing.JFrame {
         {
            result = user_In * 30.48;
         }
+        else if (FromArea == "Inches" && IntoArea == "Inches")
+        {
+            result = user_In * 1;
+        }
+        else if (FromArea == "Inches" && IntoArea == "Feet")
+        {
+            result = user_In / 12;
+        }
+        else if (FromArea == "Inches" && IntoArea == "Centimeters")
+        {
+            result = user_In * 2.54;
+        }
+        else if (FromArea == "Inches" && IntoArea == "Meters")
+        {
+            result = user_In * 0.0254;
+        }
+        
         
         
         //printing result to label
