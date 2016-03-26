@@ -277,11 +277,23 @@ public class ConverterUITheThird extends javax.swing.JFrame {
         {
            result = user_In * 1;
         }
+        else if (FromArea == "Feet" && IntoArea == "Inches")
+        {
+           result = user_In * 12;
+        }
+        else if (FromArea == "Feet" && IntoArea == "Meters")
+        {
+           result = user_In * 0.3048;
+        }
+        else if (FromArea == "Feet" && IntoArea == "Centimeters")
+        {
+           result = user_In * 30.48;
+        }
         
         
         //printing result to label
         String resultPrint;
-        resultPrint = String.valueOf(result);
+        resultPrint = String.valueOf(roundTo2.format(result));
         lbl_IntoArea.setText(resultPrint);
     }//GEN-LAST:event_btn_ConvertActionPerformed
 
