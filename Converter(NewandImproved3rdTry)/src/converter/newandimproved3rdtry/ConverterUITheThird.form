@@ -49,50 +49,38 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="radbtn_FromMeters" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Component id="radbtn_FromFeet" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="radbtn_FromCentimeters" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="radbtn_FromInches" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="radbtn_MetersInto" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Component id="radbtn_IntoFeet" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="53" pref="236" max="32767" attributes="0"/>
+                      <Component id="btn_Convert" min="-2" pref="199" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Component id="txt_From" min="-2" pref="107" max="-2" attributes="0"/>
-                      <EmptySpace pref="76" max="32767" attributes="0"/>
-                      <Component id="btn_Convert" min="-2" pref="199" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                      <Component id="txt_Into" min="-2" pref="107" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="cboBox_From" alignment="0" pref="107" max="32767" attributes="0"/>
+                                  <Component id="txt_From" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="cboBox_Into" min="-2" pref="107" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="lbl_Into" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -106,54 +94,22 @@
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="radbtn_FromMeters" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radbtn_FromFeet" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radbtn_MetersInto" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radbtn_IntoFeet" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="radbtn_FromCentimeters" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="radbtn_FromInches" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboBox_From" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboBox_Into" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btn_Convert" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txt_From" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txt_Into" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_Into" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Component id="btn_Convert" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="25" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JRadioButton" name="radbtn_FromMeters">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Meters"/>
-                <Property name="toolTipText" type="java.lang.String" value=""/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="radbtn_FromCentimeters">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Centimeters"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="radbtn_FromFeet">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Feet"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="radbtn_FromInches">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Inches"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radbtn_FromInchesActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -170,26 +126,6 @@
                 <Property name="text" type="java.lang.String" value="...into..."/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="radbtn_MetersInto">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Meters"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton4">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Centimeters"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="radbtn_IntoFeet">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Feet"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton6">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Inches"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="btn_Convert">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Convert!"/>
@@ -197,7 +133,33 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txt_From">
             </Component>
-            <Component class="javax.swing.JTextField" name="txt_Into">
+            <Component class="javax.swing.JComboBox" name="cboBox_From">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Feet&quot;, &quot;Inches&quot;, &quot;Meters&quot;, &quot;Centimetres&quot; })" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cboBox_Into">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Feet&quot;, &quot;Inches&quot;, &quot;Meters&quot;, &quot;Centimeters&quot; })" type="code"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cboBox_IntoActionPerformed"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="lbl_Into">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
