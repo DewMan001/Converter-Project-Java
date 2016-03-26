@@ -29,19 +29,119 @@ public class ConverterUITheThird extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
+        radbtn_FromMeters = new javax.swing.JRadioButton();
+        radbtn_FromCentimeters = new javax.swing.JRadioButton();
+        radbtn_FromFeet = new javax.swing.JRadioButton();
+        radbtn_FromInches = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        radbtn_MetersInto = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        radbtn_IntoFeet = new javax.swing.JRadioButton();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        btn_Convert = new javax.swing.JButton();
+        txt_From = new javax.swing.JTextField();
+        txt_Into = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        radbtn_FromMeters.setText("Meters");
+        radbtn_FromMeters.setToolTipText("");
+
+        radbtn_FromCentimeters.setText("Centimeters");
+
+        radbtn_FromFeet.setText("Feet");
+
+        radbtn_FromInches.setText("Inches");
+        radbtn_FromInches.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radbtn_FromInchesActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 16)); // NOI18N
+        jLabel1.setText("Convert from...");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 16)); // NOI18N
+        jLabel2.setText("...into...");
+
+        radbtn_MetersInto.setText("Meters");
+
+        jRadioButton4.setText("Centimeters");
+
+        radbtn_IntoFeet.setText("Feet");
+
+        jRadioButton6.setText("Inches");
+
+        btn_Convert.setText("Convert!");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 631, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(radbtn_FromMeters)
+                        .addGap(47, 47, 47)
+                        .addComponent(radbtn_FromFeet))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(radbtn_FromCentimeters)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(radbtn_FromInches)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(radbtn_MetersInto)
+                        .addGap(42, 42, 42)
+                        .addComponent(radbtn_IntoFeet))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jRadioButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButton6)))
+                .addGap(36, 36, 36))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(98, 98, 98))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(txt_From, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addComponent(btn_Convert, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
+                .addComponent(txt_Into, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 266, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(radbtn_FromMeters)
+                    .addComponent(radbtn_FromFeet)
+                    .addComponent(radbtn_MetersInto)
+                    .addComponent(radbtn_IntoFeet))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(radbtn_FromCentimeters)
+                    .addComponent(radbtn_FromInches)
+                    .addComponent(jRadioButton4)
+                    .addComponent(jRadioButton6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_Convert)
+                    .addComponent(txt_From, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_Into, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Area", jPanel2);
@@ -50,7 +150,7 @@ public class ConverterUITheThird extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 631, Short.MAX_VALUE)
+            .addGap(0, 675, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -63,9 +163,7 @@ public class ConverterUITheThird extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 636, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -74,6 +172,10 @@ public class ConverterUITheThird extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void radbtn_FromInchesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radbtn_FromInchesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radbtn_FromInchesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,8 +213,21 @@ public class ConverterUITheThird extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_Convert;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JRadioButton radbtn_FromCentimeters;
+    private javax.swing.JRadioButton radbtn_FromFeet;
+    private javax.swing.JRadioButton radbtn_FromInches;
+    private javax.swing.JRadioButton radbtn_FromMeters;
+    private javax.swing.JRadioButton radbtn_IntoFeet;
+    private javax.swing.JRadioButton radbtn_MetersInto;
+    private javax.swing.JTextField txt_From;
+    private javax.swing.JTextField txt_Into;
     // End of variables declaration//GEN-END:variables
 }
