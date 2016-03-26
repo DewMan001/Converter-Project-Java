@@ -117,7 +117,7 @@ public class ConverterUITheThird extends javax.swing.JFrame {
                     .addComponent(lbl_IntoArea))
                 .addGap(6, 6, 6)
                 .addComponent(btn_Convert)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Area", jPanel2);
@@ -132,9 +132,9 @@ public class ConverterUITheThird extends javax.swing.JFrame {
 
         txt_FromTemp.setToolTipText("Type in how many you want to convert here!");
 
-        cboBox_FromTemp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Feet", "Inches", "Meters", "Centimetres" }));
+        cboBox_FromTemp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Farenheit", "Celsius" }));
 
-        cboBox_IntoTemp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Feet", "Inches", "Meters", "Centimeters" }));
+        cboBox_IntoTemp.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Farenheit", "Celsius" }));
         cboBox_IntoTemp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cboBox_IntoTempActionPerformed(evt);
@@ -223,7 +223,7 @@ public class ConverterUITheThird extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, Short.MAX_VALUE)
         );
 
         pack();
