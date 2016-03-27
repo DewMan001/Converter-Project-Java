@@ -72,7 +72,7 @@ public class ConverterUITheThird extends javax.swing.JFrame {
 
         txt_FromArea.setToolTipText("Type in how many you want to convert here!");
 
-        cboBox_FromArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Feet", "Inches", "Meters", "Centimetres" }));
+        cboBox_FromArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Feet", "Inches", "Meters", "Centimeters" }));
 
         cboBox_IntoArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Feet", "Inches", "Meters", "Centimeters" }));
         cboBox_IntoArea.addActionListener(new java.awt.event.ActionListener() {
@@ -141,6 +141,11 @@ public class ConverterUITheThird extends javax.swing.JFrame {
         jLabel4.setText("...into...");
 
         btn_Convert1.setText("Convert!");
+        btn_Convert1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Convert1ActionPerformed(evt);
+            }
+        });
 
         txt_FromTemp.setToolTipText("Type in how many you want to convert here!");
 
@@ -305,14 +310,48 @@ public class ConverterUITheThird extends javax.swing.JFrame {
         {
             result = user_In * 0.0254;
         }
-        
-        
+        else if (FromArea == "Meters" && IntoArea == "Meters")
+        {
+            result = user_In * 1;
+        }
+        else if (FromArea == "Meters" && IntoArea == "Centimeters")
+        {
+            result = user_In * 100;
+        }
+        else if (FromArea == "Meters" && IntoArea == "Feet")
+        {
+            result = user_In / 0.3048;
+        }
+        else if (FromArea == "Meters" && IntoArea == "Inches")
+        {
+            result = user_In / 0.0254;
+        }
+        else if (FromArea == "Centimeters" && IntoArea == "Centimeters")
+        {
+            result = user_In * 1;
+        }
+        else if (FromArea == "Centimeters" && IntoArea == "Meters")
+        {
+            result = user_In / 100;
+        }
+        else if (FromArea == "Centimeters" && IntoArea == "Feet")
+        {
+            result = user_In / 30.48;
+        }
+        else if (FromArea == "Centimeters" && IntoArea == "Inches")
+        {
+            result = user_In / 2.54;
+        }
         
         //printing result to label
         String resultPrint;
         resultPrint = String.valueOf(roundTo2.format(result));
         lbl_IntoArea.setText(resultPrint);
     }//GEN-LAST:event_btn_ConvertActionPerformed
+
+    private void btn_Convert1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Convert1ActionPerformed
+        //declaring and getting 
+    }//GEN-LAST:event_btn_Convert1ActionPerformed
 
     /**
      * @param args the command line arguments
