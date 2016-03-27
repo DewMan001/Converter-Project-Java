@@ -350,7 +350,51 @@ public class ConverterUITheThird extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_ConvertActionPerformed
 
     private void btn_Convert1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Convert1ActionPerformed
-        //declaring and getting 
+        //setting up the rounding format to make things all pretty
+        DecimalFormat roundTo2 = new DecimalFormat("#.##");
+
+        //declaring some variables for getting the user's input
+        String userString;
+        userString = " ";
+        double user_In;
+        user_In = 0;
+        
+        //putting the text from the textbox into the string
+        userString = txt_FromTemp.getText();
+        //and then turning that string into a double
+        user_In = Double.parseDouble(userString);
+        
+        //also, a double for the result
+        double result;
+        result = 0;
+        
+        //Putting the text of the dropdown menus into
+        //easy-to-use string variables
+        String FromTemp = cboBox_FromTemp.getSelectedItem().toString();
+        String IntoTemp = cboBox_IntoTemp.getSelectedItem().toString();
+        
+        //And so begins the chain of Ifs and Else Ifs
+        if (FromTemp == "Celsius" && IntoTemp == "Celsius")
+        {
+            result = user_In * 1;
+        }
+        else if (FromTemp == "Celsius" && IntoTemp == "Farenheit")
+        {
+            result = (user_In * 1.8) + 32;
+        }
+        else if (FromTemp == "Farenheit" && IntoTemp == "Farenheit")
+        {
+            result = user_In * 1;
+        }
+        else if (FromTemp == "Farenheit" && IntoTemp == "Celsius")
+        {
+            result = ((user_In - 32)* 5) / 9;
+        }
+        
+        //printing result to label
+        String resultPrint;
+        resultPrint = String.valueOf(roundTo2.format(result));
+        lbl_IntoTemp.setText(resultPrint);
     }//GEN-LAST:event_btn_Convert1ActionPerformed
 
     /**
