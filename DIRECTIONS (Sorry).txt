@@ -1,0 +1,5 @@
+~~DIRECTIONS (Construction of the filesystem on this one wasn't the best)~~
+
+The final actual project is in the Converter(NewandImproved3rdTry)
+
+Go there in your Java IDE
